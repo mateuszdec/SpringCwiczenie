@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Schronisko</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body>
+
+<div class="header">
+    <h1>Schronisko Reksio i Klakier</h1>
+</div>
+
+<div class="contetnt">
+
+    <a href="/">Powrót do strony głównej</a>
+    <h2 th:text="${name}">NAZWA</h2>
+
+    <p th:text="${description}">Tutaj będzie info o zwierzaku</p>
+
+</div>
+
+</body>
+</html>
