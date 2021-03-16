@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Schronisko</title>
@@ -18,8 +18,13 @@
 <div class="contetnt">
 <h2>Zwierzaki szukające domu</h2>
 
-<a href="/zwierzak?imie=Azor">Azor</a><br/>
-<a href="/zwierzak?imie=Rudy">Rudy</a>
+    <a th:href="@{'/zwierzak?imie=' + ${animal.name}}" class="animal" th:each="animal: ${animals}">
+        <img th:src="${animal.img}" width="150" height="100">
+        <div class="animal-info ml-2">
+            <h2 th:text="${animal.name}">Azor</h2>
+            <p th:text="${animal.description}">Skrócony opis</p>
+        </div>
+    </a>
 
 </div>
 

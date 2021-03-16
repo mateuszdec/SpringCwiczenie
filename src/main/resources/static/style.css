@@ -6,3 +6,13 @@
 .contetnt {
     margin-left: 50px;
 }
+
+.animal {
+    display: flex;
+    flex-direction: row;
+}
+
+.animal-info {
+    display: flex;
+    flex-direction: column;
+}

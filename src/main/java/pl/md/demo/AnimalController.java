@@ -14,6 +14,12 @@ public class AnimalController {
         this.animalRepository = animalRepository;
     }
 
+    @GetMapping("/")
+    public String home(Model model) {
+        model.addAttribute("animals", animalRepository.findAll());
+        return "home";
+    }
+
     @GetMapping("/zwierzak")
     public String details(@RequestParam String imie, Model model) {
         Animal animal = animalRepository.findByName(imie);
